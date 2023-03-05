@@ -1,0 +1,242 @@
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
+local Window = Library.CreateLib("WLOL Gold", "DarkTheme") 
+
+--TABS--
+
+local m = Window:NewTab("Main")
+local s = Window:NewTab("Scripts")
+local h = Window:NewTab("Hubs")
+local lp = Window:NewTab("Local Player")
+local f = Window:NewTab("Settings")
+
+--sections--
+local fSection = f:NewSection("Settings")
+local lpSection = lp:NewSection("Local Player")
+local mSection = m:NewSection("Main")
+local hSection = h:NewSection("Hubs")
+local sSection = s:NewSection("Scripts")
+
+ -- main
+mSection:NewLabel("Made By â€¢UNDERRBLX SCRIPTSâ€¢")
+mSection:NewLabel("Credits To â€¢Shanboi#0285â€¢")
+mSection:NewLabel("Credits To â€¢DeezDiseaseâ€¢")
+mSection:NewLabel("Channel â€¢UNDERRBLX SCRIPTSâ€¢")
+mSection:NewButton("â€¢Contact Usâ€¢", "Join Our Discord", function()
+    setclipboard("https://discord.gg/fx5gV6qR")
+toclipboard("https://discord.gg/fx5gV6qR")
+end)
+
+-- LP
+lpSection:NewButton("Die", "Only Works On Games Where You Can Die", function()
+    game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end)
+lpSection:NewTextBox("WalkSpeed", "", function(value)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
+end)
+lpSection:NewTextBox("Jump Power", "", function(value)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
+end)
+lpSection:NewTextBox("FOV","MAX FOV 120", function(txt) game.Workspace.CurrentCamera.FieldOfView = txt
+end)
+lpSection:NewToggle("Sprint", "", function(value)
+    if value then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 24
+    else
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    end
+end)
+lpSection:NewButton("Normal WalkSpeed", "", function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+end)
+-- Hubs
+hSection:NewButton("VHUB", "", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Veincx5315/Created/VHub/Simple'),true))()
+end)
+hSection:NewButton("Universal FE Hub", "", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Dvrknvss/UniversalFEScriptHub/main/Script'))()
+end)
+hSection:NewButton("OrcaHub", "Keybind Is K", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/richie0866/orca/master/public/latest.lua'),true))()
+end)
+hSection:NewButton("Pendulum Hub", "", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Pendulum%20Hub%20V5.lua"))()
+end)
+hSection:NewButton("Games Hub", "", function()
+    loadstring("\103\97\109\101\46\83\116\97\114\116\101\114\71\117\105\58\83\101\116\67\111\114\101\40\34\83\101\110\100\78\111\116\105\102\105\99\97\116\105\111\110\34\44\32\123\10\32\32\32\32\84\105\116\108\101\32\61\32\34\71\97\109\101\115\32\72\117\98\32\86\53\34\59\10\32\32\32\32\84\101\120\116\32\61\32\34\83\117\98\115\99\114\105\98\101\32\116\111\32\84\97\107\101\32\77\111\100\122\122\34\59\32\45\45\32\119\104\97\116\32\116\104\101\32\116\101\120\116\32\115\97\121\115\32\40\111\102\99\41\10\32\32\32\32\68\117\114\97\116\105\111\110\32\61\32\53\59\10\125\41\10\103\97\109\101\46\83\116\97\114\116\101\114\71\117\105\58\83\101\116\67\111\114\101\40\34\83\101\110\100\78\111\116\105\102\105\99\97\116\105\111\110\34\44\32\123\10\32\32\32\32\84\105\116\108\101\32\61\32\34\67\114\101\100\105\116\115\32\84\111\32\65\100\118\97\110\99\101\70\97\108\108\105\110\103\34\59\10\32\32\32\32\84\101\120\116\32\61\32\34\83\117\98\115\99\114\105\98\101\32\116\111\32\89\101\108\108\111\119\71\114\101\103\80\114\111\103\114\97\109\34\59\32\45\45\32\119\104\97\116\32\116\104\101\32\116\101\120\116\32\115\97\121\115\32\40\111\102\99\41\10\32\32\32\32\68\117\114\97\116\105\111\110\32\61\32\53\59\10\125\41\10\10\108\111\99\97\108\32\107\97\118\111\85\105\32\61\32\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\118\102\102\49\98\81\57\70\34\41\41\40\41\10\108\111\99\97\108\32\119\105\110\100\111\119\32\61\32\107\97\118\111\85\105\46\67\114\101\97\116\101\76\105\98\40\34\71\97\109\101\115\32\72\85\66\32\86\53\32\83\101\108\101\99\116\111\114\34\44\34\68\97\114\107\84\104\101\109\101\34\41\10\32\10\45\45\45\84\97\98\115\10\32\10\108\111\99\97\108\32\84\97\98\49\32\61\32\119\105\110\100\111\119\58\78\101\119\84\97\98\40\34\83\101\108\101\99\116\34\41\10\108\111\99\97\108\32\84\97\98\49\83\101\99\116\105\111\110\32\61\32\84\97\98\49\58\78\101\119\83\101\99\116\105\111\110\40\34\83\101\108\101\99\116\32\97\32\85\73\34\41\10\10\45\45\45\66\117\116\116\111\110\115\10\32\10\32\84\97\98\49\83\101\99\116\105\111\110\58\78\101\119\66\117\116\116\111\110\40\34\79\108\100\32\85\73\32\76\105\98\114\97\114\121\34\44\34\78\111\32\100\101\115\99\114\105\112\116\105\111\110\34\44\102\117\110\99\116\105\111\110\40\41\10\32\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\84\97\107\101\77\111\100\122\122\47\71\97\109\101\115\45\72\85\66\45\86\53\45\79\116\104\101\114\45\82\101\97\108\47\109\97\105\110\47\71\97\109\101\115\37\50\48\72\85\66\37\50\48\86\53\37\50\48\79\116\104\101\114\37\50\48\82\101\97\108\34\41\41\40\41\10\32\101\110\100\41\10\32\10\32\84\97\98\49\83\101\99\116\105\111\110\58\78\101\119\66\117\116\116\111\110\40\34\78\101\119\32\85\73\32\76\105\98\114\97\114\121\40\115\111\109\101\32\98\117\103\115\41\34\44\34\78\111\32\100\101\115\99\114\105\112\116\105\111\110\34\44\102\117\110\99\116\105\111\110\40\41\10\32\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\84\97\107\101\77\111\100\122\122\47\71\97\109\101\115\45\72\85\66\45\86\53\47\109\97\105\110\47\71\97\109\101\115\37\50\48\72\85\66\37\50\48\86\53\34\41\41\40\41\10\32\101\110\100\41\10")()
+end)
+-- Scripts
+sSection:NewButton("Adopt Me! (key)","hello",function()
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/BloxiYT/Diamond/main/AdoptMe"))()
+end)
+
+sSection:NewButton("Brookhaven RP","",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
+end)
+
+sSection:NewButton("[UPDATE]Blox Friuts","",function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+end)
+
+sSection:NewButton("Combat Warriors","",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SussyImposterRed/Scripts/main/NEW_NOVA"))()
+end)
+
+sSection:NewButton(" Evade","",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Darkrai-X/main/Games/Evade"))()
+end)
+
+sSection:NewButton("Doors","",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Darkrai-X/main/Games/Doors"))()
+end)
+
+sSection:NewButton("Rainbow Friends","",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/JNHHGaming/Rainbow-Friends/main/Rainbow%20Friends"))()
+end)
+
+sSection:NewButton("Ã‚Â¡Survive the Killer!","",function()
+local games = {
+ 
+    ["SurviveTheKiller"] = 4580204640
+ 
+}
+ 
+for i,v in pairs(games) do
+    if game.PlaceId == v then print("Supported!"); loadstring(game:HttpGet("https://raw.githubusercontent.com/MiloHaxx/ChairWare/main/Games/" .. i .. ".lua"))() end
+end
+ 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MiloHaxx/ChairWare/main/dcJoin.lua"))()
+end)
+
+sSection:NewButton(" Pet Simulator X (key in desc)","key: projectWBIsAwesomeG8J7GJ678PY",function()
+getgenv().key = "projectWBIsAwesomeG8J7GJ678PY"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Muhammad6196/Project-WD/main/Main.lua"))()
+end)
+
+sSection:NewButton("MAP VOTING Tower Defense Simulator(PATCHED)","",function()
+end)
+
+sSection:NewButton("Bedwars  [NEW KIT!]","",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/bojoexploitz/yooo/main/itsobfuscated/InfinityHubTooOP", true))()
+end)
+local sSection = s:NewSection("Featured games")
+
+sSection:NewButton("Breaking Point","",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ColdStep2/Breaking-Point-Funny-Squid-Hax/main/Breaking%20Point%20Funny%20Squid%20Hax",true))();
+end)
+
+sSection:NewButton("Breaking Point (Auto Hit)","",function()
+while wait() do for i,v in pairs(game.Players:GetPlayers()) do if v.Name ~= game.Players.LocalPlayer.Name then if game.Workspace:FindFirstChild(v.Name) then if game.Workspace[v.Name].Humanoid.Sit ~= true then if game.Workspace[v.Name]:FindFirstChild("Blade") then game:GetService("ReplicatedStorage").RemoteEvent:FireServer(37, CFrame.new(Vector3.new(0, 0, 0), Vector3.new(0, 0, 0)), Vector3.new(v.Character.HumanoidRootPart.CFrame.x, 4, v.Character.HumanoidRootPart.CFrame.z), Vector3.new(0, 0, 0)) wait(.1) game:GetService("ReplicatedStorage").RemoteEvent:FireServer(43, v.Character.HumanoidRootPart, v, "IIlIla", true) else if v.Backpack:FindFirstChild("Blade") then game:GetService("ReplicatedStorage").RemoteEvent:FireServer(37, CFrame.new(Vector3.new(0, 0, 0), Vector3.new(0, 0, 0)), Vector3.new(v.Character.HumanoidRootPart.CFrame.x, 4, v.Character.HumanoidRootPart.CFrame.z), Vector3.new(0, 0, 0)) wait(.1) game:GetService("ReplicatedStorage").RemoteEvent:FireServer(43, v.Character.HumanoidRootPart, v, "IIlIla", true) end end end end end end end
+end)
+
+sSection:NewButton("Breaking Point (H4R7N old)","",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/H4R7NHacks/Obfuscated/master/Breaking%20Point%20H4R7N%20Hack.lua"))()
+end)
+
+sSection:NewButton("Breaking Point (H4R7N new)","",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/H4R7NHacks/Obfuscated/master/Breaking%20Point%20H4R7N%20Hack%20v1.2.lua"))()
+end)
+sSection:NewButton("Murder Mystery 2","",function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/ScriptHubScripts/master/MM2%20Admin%20Panel'),true))()
+end)
+
+sSection:NewButton("Da Hood","",function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002'))()
+end)
+
+sSection:NewButton("Muscle Legends","",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/harisiskandar178/Roblox-Script/main/Muscle%20Legend"))()
+end)
+
+sSection:NewButton("Build A Boat For Treasure","",function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/XRoLLu/UWU/main/BUILD%20A%20BOAT%20FOR%20TREASURE.lua'))()
+end)
+
+sSection:NewButton("Tower of Hell","",function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/VectorXinside/tower/main/towerofhell.lua'))()
+end)
+
+sSection:NewButton("Natural Disaster Survival","",function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/9NLK7/93qjoadnlaknwldk/main/main'))()
+end)
+
+sSection:NewButton("Break In","",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua"))()
+end)
+
+sSection:NewButton("Zombie Attack","",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Darkrai-X/main/Games/Zombie%20Attack"))()
+end)
+
+sSection:NewButton("Legends Of Speed ","",function()
+loadstring(game:HttpGet("https://pastebin.com/raw/1iMHrZ50", true))()
+end)
+
+sSection:NewButton("FACTORY! Car Delearship Tycoon","",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/IExpIoit/Script/main/UltimateHub"))()
+end)
+
+sSection:NewButton("Starving Artists (DONATION GAME)","",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Jeux45/Starving-Artist-script/main/Script", true))()
+end)
+
+sSection:NewButton("Longest Answer Wins (key in desc)","key: 5TxhCR2J8Q",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/idontknowwhattonamemyself/Nic-Hub-v2/Lua/Loader"))()
+end)
+
+sSection:NewButton("Longest Answer Wins (No key)","",function()
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/UnknownStraz/Longest-Answer-Wins/main/Script"), true))()
+end)
+
+sSection:NewButton("Infection Smile","",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/InfectiousSmile.lua", true))()
+end)
+
+sSection:NewButton("CHAOS","",function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/1111-ssss/Chaos_Script/main/Chaos_script.txt'))()
+end)
+
+sSection:NewButton("Flee The Facility","",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/khoaScript/scripts/master/flee-the-facility.lua"))()
+end)
+
+sSection:NewButton("TPS: Street Soccer","",function()
+loadstring(game:HttpGet("https://paste.ee/r/ykM2s", true))()
+end)
+sSection:NewLabel("Scripts")
+sSection:NewButton("Fly Race (Option 1)","No description",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ToraIsMe2/ToraIsMe2/main/0flyrace", true))()
+end)
+sSection:NewButton("Fly Race (Option 2)","No description",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Amenteshades/robloxscripts/main/flyracemobile.lua"))()
+end)
+sSection:NewButton("Prison Life (Cars Fixed!)","No description",function()
+loadstring(game:HttpGet('https://pastebin.com/raw/iZ64yzjE'))();
+end)
+sSection:NewButton("Nico's nextbots","No description",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Darkrai-X/main/Games/NicoNextBots", true))()
+end)
+sSection:NewButton("Making memes in your basement at 3AM","No description",function()
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/cavly/surivVErise/main/farming"), true))()
+end)
+sSection:NewButton("Keyboard GUI","No description",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+end)
+sSection:NewButton("Admin Hub","No description",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/HeyGyt/simplityv2/main/main"))()
+end)
+
+sSection:NewButton("FE R15 Emotes","No description",function()
+loadstring(game:HttpGet("https://gitlab.com/Tsuniox/lua-stuff/-/raw/master/R15GUI.lua"))()
+end)
+
+sSection:NewButton("Spy Gui","No description",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MichaelScripter/MiniScript/main/Spy%20gui.lua"))()
+end)
+
+sSection:NewButton("Auto Piano","No description",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Madness676/FixedPianoV2/main/Pandaexploits.lua", true))()
+end)
+
+sSection:NewButton("FE Animations GUI (FIXED)","No description",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Animation-Hub/main/Animation%20Gui", true))()
+end)
